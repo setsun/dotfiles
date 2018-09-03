@@ -1,0 +1,17 @@
+[user]
+	name = Setsun
+	email = setsun@setsun.io
+[alias]
+	cl = clone
+	co = checkout
+	cob = checkout -b
+	st = status
+	ss = stash
+	ssa = stash apply
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	amend = commit --amend --no-edit
+	undo = reset HEAD~1 --mixed
+[commit]
+	verbose = true
+[push]
+	default = current
