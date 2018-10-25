@@ -5,9 +5,11 @@
 	cl = clone
 	co = checkout
 	cob = checkout -b
+	df = diff
 	st = status
 	ss = stash
 	ssa = stash apply
+	ssp = stash pop
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	amend = commit --amend --no-edit
 	undo = reset HEAD~1 --mixed
