@@ -3,15 +3,27 @@
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install zsh, and make default shell
-brew install zsh
-chsh -s /usr/local/bin/zsh
-
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# install various utils
+brew install coreutils gpg
 
 # install keychain for ssh
 brew install keychain
 
 # install asdf for language version management
 brew install asdf
+
+# import Node.js OpenPGP keys
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+# install yarn
+curl -o- -L https://yarnpkg.com/install.sh | bash
+
+# install rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# install zsh, and make default shell
+brew install zsh
+chsh -s /usr/local/bin/zsh
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
