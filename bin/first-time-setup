@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# install zsh, and make default shell
+brew install zsh
+chsh -s /usr/local/bin/zsh
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install keychain for ssh
+brew install keychain
+
+# install asdf for language version management
+brew install asdf
