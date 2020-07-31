@@ -2,6 +2,9 @@
 	name = Setsun
 	email = setsun@setsun.io
 [alias]
+	br = branch
+	brd-l = branch -D
+	brd-r = push origin --delete
 	cl = clone
 	co = checkout
 	cob = checkout -b
